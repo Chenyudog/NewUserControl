@@ -1,0 +1,5 @@
+"E:\CLion 2025.2.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=E:/environment/environment/ARM_GCC/ARM_GCC/arm/bin/arm-none-eabi-gcc.exe -DCMAKE_CXX_COMPILER=E:/environment/environment/ARM_GCC/ARM_GCC/arm/bin/arm-none-eabi-g++.exe -G "MinGW Makefiles" -S E:\engineer_ws\NewUserControl -B E:\engineer_ws\NewUserControl\cmake-build-debug
+-- Minimal optimization, debug info included
+-- Configuring done (0.1s)
+-- Generating done (0.1s)
+-- Build files have been written to: E:/engineer_ws/NewUserControl/cmake-build-debug

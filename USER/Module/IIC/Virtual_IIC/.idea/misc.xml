@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug_MinGW_STM32_DEV" ENABLED="true" CONFIG_NAME="Debug" TOOLCHAIN_NAME="MinGW _STM32_DEV" />
+    </configurations>
+  </component>
+</project>
