@@ -18,7 +18,7 @@
 
 void Software_IIC_Init_3(void);
 uint16_t get_raw_angle_3(void); // 可以修改的角度
-void MT6701_Init_4(MT6701_Encoder_t *encoder);
+void MT6701_Init_3(MT6701_Encoder_t *encoder);
 void MT6701_SetZero_3(MT6701_Encoder_t *encoder);  // 设定零点
 float get_real_angle_3(MT6701_Encoder_t *encoder);
 void MT6701_Update_3(MT6701_Encoder_t *encoder);

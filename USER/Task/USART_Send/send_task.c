@@ -48,8 +48,8 @@ static volatile uint8_t current_buffer = 0;           // 当前缓冲区索引
 uint8_t dma_busy = 0;        // DMA状态标志位
 uint8_t dma_busy2 = 0; // DMA状态标志位2（可选，视具体需求而定）
 
-static float angles[7] = {0.0f}; // 用于临时存储队列中读取的编码器值
-static float encoder_values[7] = {0, 0, 0, 0, 0, 0,0};              // 存储6个编码器值
+static float angles[6] = {0.0f}; // 用于临时存储队列中读取的编码器值
+static float encoder_values[6] = {0, 0, 0, 0, 0, 0};              // 存储6个编码器值
 
 extern QueueHandle_t xQueue;    // FreeRTOS 队列句柄
 
@@ -71,7 +71,7 @@ void PackData(float *values, uint16_t data_length, RobotArmController_t *tx_data
 
     // 数据区：6个float（每个编码器值4字节）
     // 设置数据段
-    for (int i = 0; i < 7; i++) {
+    for (int i = 0; i < 6; i++) {
         uint8_t *src = (uint8_t *)&values[i];
         uint8_t *dst = &tx_data->data[i * 4];
         memcpy(dst, src, sizeof(float)); // 自动处理4个字节
@@ -154,8 +154,8 @@ void SendTask_Entry(void const * argument)
             // 将打包后的数据写入DMA缓冲区
             memcpy(dma_tx_buffer[current_buffer], &tx_data, FRAME_SIZE);
             // 启动 DMA 发送
-            DMA_Send_Frame();
-           // DMA_Send_Frame2(); // 发送数据帧
+           // DMA_Send_Frame();
+           DMA_Send_Frame2(); // 发送数据帧
 
            // printf("Send Data\n");
         }

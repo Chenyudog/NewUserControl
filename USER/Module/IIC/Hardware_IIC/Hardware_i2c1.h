@@ -12,6 +12,7 @@
 
 #include "usart_task.h"
 
+
 typedef enum
 {
     MT6701_SLAVE_ADDR=0x06,     //MT6701  IIC地址
@@ -27,16 +28,16 @@ typedef enum
 
 // 定义MT6701编码器结构体
 typedef struct {
-    uint16_t first_raw_angle;        //14位角度原始值
+    uint32_t first_raw_angle;        //14位角度原始值
 
-    uint16_t raw_angle;        //14位角度原始值
+    uint32_t raw_angle;        //14位角度原始值
     float real_angle;       //14位零点角度真实值
-    uint16_t raw_zero;         //14位零点原始值
-    uint16_t last_raw_angle;       // 上一次读取的原始角度（用于检测圈数跳变）
+    uint32_t raw_zero;         //14位零点原始值
+    uint32_t last_raw_angle;       // 上一次读取的原始角度（用于检测圈数跳变）
 
     // 多圈记录相关
     int32_t  diff;            // 圈数计数（正：顺时针多圈；负：逆时针多圈）
-    int32_t  turns;            // 圈数计数（正：顺时针多圈；负：逆时针多圈）
+    int32_t  turns;     // 圈数计数（正：顺时针多圈；负：逆时针多圈）
     int32_t  total_angle;      // 总角度（= turns*360 + angle_deg）
 
     float    last_total_angle_deg;

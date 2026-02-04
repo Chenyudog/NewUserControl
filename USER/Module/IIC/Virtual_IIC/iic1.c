@@ -130,7 +130,7 @@ static uint8_t master_readByte(uint8_t ack) {
 
 // 修正后的 master_readByte_Complete 函数
 // 修正后的 I2C 多字节读函数（语法+时序双修复）
-uint8_t master_readByte_Complete(uint8_t slave, uint8_t addr, uint8_t *buf, uint8_t len)
+static uint8_t master_readByte_Complete(uint8_t slave, uint8_t addr, uint8_t *buf, uint8_t len)
 {
     Start();
 
@@ -178,7 +178,7 @@ uint8_t master_readByte_Complete(uint8_t slave, uint8_t addr, uint8_t *buf, uint
 }
 
 // 修正后的 master_readByte_Complete 函数
-uint8_t master_writeByte(uint8_t slave, uint8_t addr, uint8_t data)
+static uint8_t master_writeByte(uint8_t slave, uint8_t addr, uint8_t data)
 {
     // IIC读寄存器标准流程：
     // 起始→发写地址（7b+0）→等从机应答→发寄存器地址→等从机应答→
@@ -245,7 +245,7 @@ float get_real_angle_1(MT6701_Encoder_t *encoder)
 {
     // 核心公式：(当前14位原始角度 - 14位零点原始角度) × 360° / 14位量程(16384)
     // 强制转为int16_t防止无符号数相减溢出（如raw_angle < raw_zero时）
-    int16_t angle_diff = (int16_t)(encoder->raw_angle - encoder->raw_zero);
+    int16_t angle_diff = (encoder->raw_angle - encoder->raw_zero);
     encoder->real_angle = (float)angle_diff * 360.0f / 16384.0f;
 
     // 可选：将单圈角度限制在【0~360°】或【-180~180°】，根据需求选择
@@ -261,7 +261,7 @@ float get_real_angle_1(MT6701_Encoder_t *encoder)
 // 初始化MT6701编码器结构体及软件IIC总线
 // encoder：MT6701编码器结构体指针（存储角度、圈数、偏移等核心参数）
 // 初始化MT6701编码器结构体及软件IIC总线
-void MT6701_Init_6(MT6701_Encoder_t *encoder) {
+void MT6701_Init_1(MT6701_Encoder_t *encoder) {
     Software_IIC_Init_1();
     encoder->raw_zero = 0;
     encoder->raw_angle = 0;
@@ -271,6 +271,7 @@ void MT6701_Init_6(MT6701_Encoder_t *encoder) {
     encoder->total_angle = 0;  // 累计值初始化为0
     encoder->diff = 0;
     encoder->total_angle_deg = 0;
+    encoder->total_angle= 0;
     encoder->last_total_angle_deg = 0;
 
     // 核心修正：初始化后读当前角度，赋值给last_raw_angle，避免第一次diff跳变
@@ -286,7 +287,7 @@ void MT6701_SetZero_1(MT6701_Encoder_t *encoder) {
     uint8_t zpos[2]={0,0};
 
     // 2. 写入ZPOS寄存器（0x01和0x02）
-    if (master_readByte_Complete(MT6701_SLAVE_ADDR,MT6701_ZERO_H,&zpos,2) ) {
+    if (master_readByte_Complete(MT6701_SLAVE_ADDR,MT6701_ZERO_H,zpos,2) ) {
 
         return;
     }
@@ -294,7 +295,7 @@ void MT6701_SetZero_1(MT6701_Encoder_t *encoder) {
     // 4. 同步结构体中的零点记录（可选，用于软件层一致性）
     encoder->raw_zero =get_raw_angle_1();
 }
-void MT6701_Update_1(MT6701_Encoder_t *encoder) {
+ void MT6701_Update_1(MT6701_Encoder_t *encoder) {
     // 步骤1：仅读取1次原始角度（避免I2C冗余读取）
     encoder->raw_angle = get_raw_angle_1();
 
@@ -306,7 +307,7 @@ void MT6701_Update_1(MT6701_Encoder_t *encoder) {
                        encoder->turns, encoder->total_angle_deg);
 
     // 步骤3：计算角度差，【核心修正】用14位标准跨圈阈值8192/-8192
-    encoder->diff = (int16_t)(encoder->raw_angle - encoder->last_raw_angle);
+    encoder->diff = (encoder->raw_angle - encoder->last_raw_angle);
     if (encoder->diff > 8192) {        // 超过量程一半，判定为正向跨圈
         encoder->diff -= 16384;
     } else if (encoder->diff < -8192) { // 低于负的量程一半，判定为反向跨圈
@@ -315,7 +316,7 @@ void MT6701_Update_1(MT6701_Encoder_t *encoder) {
 
     // 步骤4：diff连续累加，实现多圈累计
     encoder->total_angle += encoder->diff;
-    encoder->turns = (int32_t)(encoder->total_angle / 16384);
+    encoder->turns = (encoder->total_angle / 16384);
 
     // 核心补全：根据累计原始值计算浮点总角度（度），同步更新
     encoder->total_angle_deg = (float)encoder->total_angle * 360.0f / 16384.0f;

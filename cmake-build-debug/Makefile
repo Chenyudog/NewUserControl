@@ -1463,54 +1463,6 @@ USER/Module/IIC/Virtual_IIC/iic4.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\STM32F411CEU6.elf.dir\build.make CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic4.c.s
 .PHONY : USER/Module/IIC/Virtual_IIC/iic4.c.s
 
-USER/Module/IIC/Virtual_IIC/iic5.obj: USER/Module/IIC/Virtual_IIC/iic5.c.obj
-.PHONY : USER/Module/IIC/Virtual_IIC/iic5.obj
-
-# target to build an object file
-USER/Module/IIC/Virtual_IIC/iic5.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\STM32F411CEU6.elf.dir\build.make CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic5.c.obj
-.PHONY : USER/Module/IIC/Virtual_IIC/iic5.c.obj
-
-USER/Module/IIC/Virtual_IIC/iic5.i: USER/Module/IIC/Virtual_IIC/iic5.c.i
-.PHONY : USER/Module/IIC/Virtual_IIC/iic5.i
-
-# target to preprocess a source file
-USER/Module/IIC/Virtual_IIC/iic5.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\STM32F411CEU6.elf.dir\build.make CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic5.c.i
-.PHONY : USER/Module/IIC/Virtual_IIC/iic5.c.i
-
-USER/Module/IIC/Virtual_IIC/iic5.s: USER/Module/IIC/Virtual_IIC/iic5.c.s
-.PHONY : USER/Module/IIC/Virtual_IIC/iic5.s
-
-# target to generate assembly for a file
-USER/Module/IIC/Virtual_IIC/iic5.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\STM32F411CEU6.elf.dir\build.make CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic5.c.s
-.PHONY : USER/Module/IIC/Virtual_IIC/iic5.c.s
-
-USER/Module/IIC/Virtual_IIC/iic6.obj: USER/Module/IIC/Virtual_IIC/iic6.c.obj
-.PHONY : USER/Module/IIC/Virtual_IIC/iic6.obj
-
-# target to build an object file
-USER/Module/IIC/Virtual_IIC/iic6.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\STM32F411CEU6.elf.dir\build.make CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic6.c.obj
-.PHONY : USER/Module/IIC/Virtual_IIC/iic6.c.obj
-
-USER/Module/IIC/Virtual_IIC/iic6.i: USER/Module/IIC/Virtual_IIC/iic6.c.i
-.PHONY : USER/Module/IIC/Virtual_IIC/iic6.i
-
-# target to preprocess a source file
-USER/Module/IIC/Virtual_IIC/iic6.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\STM32F411CEU6.elf.dir\build.make CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic6.c.i
-.PHONY : USER/Module/IIC/Virtual_IIC/iic6.c.i
-
-USER/Module/IIC/Virtual_IIC/iic6.s: USER/Module/IIC/Virtual_IIC/iic6.c.s
-.PHONY : USER/Module/IIC/Virtual_IIC/iic6.s
-
-# target to generate assembly for a file
-USER/Module/IIC/Virtual_IIC/iic6.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\STM32F411CEU6.elf.dir\build.make CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic6.c.s
-.PHONY : USER/Module/IIC/Virtual_IIC/iic6.c.s
-
 USER/Module/TIM_Delay/tim_delay.obj: USER/Module/TIM_Delay/tim_delay.c.obj
 .PHONY : USER/Module/TIM_Delay/tim_delay.obj
 
@@ -1807,12 +1759,6 @@ help:
 	@echo ... USER/Module/IIC/Virtual_IIC/iic4.obj
 	@echo ... USER/Module/IIC/Virtual_IIC/iic4.i
 	@echo ... USER/Module/IIC/Virtual_IIC/iic4.s
-	@echo ... USER/Module/IIC/Virtual_IIC/iic5.obj
-	@echo ... USER/Module/IIC/Virtual_IIC/iic5.i
-	@echo ... USER/Module/IIC/Virtual_IIC/iic5.s
-	@echo ... USER/Module/IIC/Virtual_IIC/iic6.obj
-	@echo ... USER/Module/IIC/Virtual_IIC/iic6.i
-	@echo ... USER/Module/IIC/Virtual_IIC/iic6.s
 	@echo ... USER/Module/TIM_Delay/tim_delay.obj
 	@echo ... USER/Module/TIM_Delay/tim_delay.i
 	@echo ... USER/Module/TIM_Delay/tim_delay.s

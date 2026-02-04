@@ -854,38 +854,10 @@ CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic4.c.s: cmake_for
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic4.c.s"
 	E:\environment\environment\ARM_GCC\ARM_GCC\arm\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\engineer_ws\NewUserControl\USER\Module\IIC\Virtual_IIC\iic4.c -o CMakeFiles\STM32F411CEU6.elf.dir\USER\Module\IIC\Virtual_IIC\iic4.c.s
 
-CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic5.c.obj: CMakeFiles/STM32F411CEU6.elf.dir/flags.make
-CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic5.c.obj: E:/engineer_ws/NewUserControl/USER/Module/IIC/Virtual_IIC/iic5.c
-CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic5.c.obj: CMakeFiles/STM32F411CEU6.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\engineer_ws\NewUserControl\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic5.c.obj"
-	E:\environment\environment\ARM_GCC\ARM_GCC\arm\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic5.c.obj -MF CMakeFiles\STM32F411CEU6.elf.dir\USER\Module\IIC\Virtual_IIC\iic5.c.obj.d -o CMakeFiles\STM32F411CEU6.elf.dir\USER\Module\IIC\Virtual_IIC\iic5.c.obj -c E:\engineer_ws\NewUserControl\USER\Module\IIC\Virtual_IIC\iic5.c
-
-CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic5.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic5.c.i"
-	E:\environment\environment\ARM_GCC\ARM_GCC\arm\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\engineer_ws\NewUserControl\USER\Module\IIC\Virtual_IIC\iic5.c > CMakeFiles\STM32F411CEU6.elf.dir\USER\Module\IIC\Virtual_IIC\iic5.c.i
-
-CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic5.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic5.c.s"
-	E:\environment\environment\ARM_GCC\ARM_GCC\arm\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\engineer_ws\NewUserControl\USER\Module\IIC\Virtual_IIC\iic5.c -o CMakeFiles\STM32F411CEU6.elf.dir\USER\Module\IIC\Virtual_IIC\iic5.c.s
-
-CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic6.c.obj: CMakeFiles/STM32F411CEU6.elf.dir/flags.make
-CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic6.c.obj: E:/engineer_ws/NewUserControl/USER/Module/IIC/Virtual_IIC/iic6.c
-CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic6.c.obj: CMakeFiles/STM32F411CEU6.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\engineer_ws\NewUserControl\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic6.c.obj"
-	E:\environment\environment\ARM_GCC\ARM_GCC\arm\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic6.c.obj -MF CMakeFiles\STM32F411CEU6.elf.dir\USER\Module\IIC\Virtual_IIC\iic6.c.obj.d -o CMakeFiles\STM32F411CEU6.elf.dir\USER\Module\IIC\Virtual_IIC\iic6.c.obj -c E:\engineer_ws\NewUserControl\USER\Module\IIC\Virtual_IIC\iic6.c
-
-CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic6.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic6.c.i"
-	E:\environment\environment\ARM_GCC\ARM_GCC\arm\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\engineer_ws\NewUserControl\USER\Module\IIC\Virtual_IIC\iic6.c > CMakeFiles\STM32F411CEU6.elf.dir\USER\Module\IIC\Virtual_IIC\iic6.c.i
-
-CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic6.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic6.c.s"
-	E:\environment\environment\ARM_GCC\ARM_GCC\arm\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\engineer_ws\NewUserControl\USER\Module\IIC\Virtual_IIC\iic6.c -o CMakeFiles\STM32F411CEU6.elf.dir\USER\Module\IIC\Virtual_IIC\iic6.c.s
-
 CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/TIM_Delay/tim_delay.c.obj: CMakeFiles/STM32F411CEU6.elf.dir/flags.make
 CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/TIM_Delay/tim_delay.c.obj: E:/engineer_ws/NewUserControl/USER/Module/TIM_Delay/tim_delay.c
 CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/TIM_Delay/tim_delay.c.obj: CMakeFiles/STM32F411CEU6.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\engineer_ws\NewUserControl\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/TIM_Delay/tim_delay.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\engineer_ws\NewUserControl\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/TIM_Delay/tim_delay.c.obj"
 	E:\environment\environment\ARM_GCC\ARM_GCC\arm\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/TIM_Delay/tim_delay.c.obj -MF CMakeFiles\STM32F411CEU6.elf.dir\USER\Module\TIM_Delay\tim_delay.c.obj.d -o CMakeFiles\STM32F411CEU6.elf.dir\USER\Module\TIM_Delay\tim_delay.c.obj -c E:\engineer_ws\NewUserControl\USER\Module\TIM_Delay\tim_delay.c
 
 CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/TIM_Delay/tim_delay.c.i: cmake_force
@@ -899,7 +871,7 @@ CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/TIM_Delay/tim_delay.c.s: cmake_forc
 CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/Algorithm/algorithm_task.c.obj: CMakeFiles/STM32F411CEU6.elf.dir/flags.make
 CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/Algorithm/algorithm_task.c.obj: E:/engineer_ws/NewUserControl/USER/Task/Algorithm/algorithm_task.c
 CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/Algorithm/algorithm_task.c.obj: CMakeFiles/STM32F411CEU6.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\engineer_ws\NewUserControl\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/Algorithm/algorithm_task.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\engineer_ws\NewUserControl\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/Algorithm/algorithm_task.c.obj"
 	E:\environment\environment\ARM_GCC\ARM_GCC\arm\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/Algorithm/algorithm_task.c.obj -MF CMakeFiles\STM32F411CEU6.elf.dir\USER\Task\Algorithm\algorithm_task.c.obj.d -o CMakeFiles\STM32F411CEU6.elf.dir\USER\Task\Algorithm\algorithm_task.c.obj -c E:\engineer_ws\NewUserControl\USER\Task\Algorithm\algorithm_task.c
 
 CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/Algorithm/algorithm_task.c.i: cmake_force
@@ -913,7 +885,7 @@ CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/Algorithm/algorithm_task.c.s: cmake_f
 CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/Robot_Config/robot.c.obj: CMakeFiles/STM32F411CEU6.elf.dir/flags.make
 CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/Robot_Config/robot.c.obj: E:/engineer_ws/NewUserControl/USER/Task/Robot_Config/robot.c
 CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/Robot_Config/robot.c.obj: CMakeFiles/STM32F411CEU6.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\engineer_ws\NewUserControl\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/Robot_Config/robot.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\engineer_ws\NewUserControl\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/Robot_Config/robot.c.obj"
 	E:\environment\environment\ARM_GCC\ARM_GCC\arm\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/Robot_Config/robot.c.obj -MF CMakeFiles\STM32F411CEU6.elf.dir\USER\Task\Robot_Config\robot.c.obj.d -o CMakeFiles\STM32F411CEU6.elf.dir\USER\Task\Robot_Config\robot.c.obj -c E:\engineer_ws\NewUserControl\USER\Task\Robot_Config\robot.c
 
 CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/Robot_Config/robot.c.i: cmake_force
@@ -927,7 +899,7 @@ CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/Robot_Config/robot.c.s: cmake_force
 CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/USART/usart_task.c.obj: CMakeFiles/STM32F411CEU6.elf.dir/flags.make
 CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/USART/usart_task.c.obj: E:/engineer_ws/NewUserControl/USER/Task/USART/usart_task.c
 CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/USART/usart_task.c.obj: CMakeFiles/STM32F411CEU6.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\engineer_ws\NewUserControl\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/USART/usart_task.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\engineer_ws\NewUserControl\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/USART/usart_task.c.obj"
 	E:\environment\environment\ARM_GCC\ARM_GCC\arm\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/USART/usart_task.c.obj -MF CMakeFiles\STM32F411CEU6.elf.dir\USER\Task\USART\usart_task.c.obj.d -o CMakeFiles\STM32F411CEU6.elf.dir\USER\Task\USART\usart_task.c.obj -c E:\engineer_ws\NewUserControl\USER\Task\USART\usart_task.c
 
 CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/USART/usart_task.c.i: cmake_force
@@ -941,7 +913,7 @@ CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/USART/usart_task.c.s: cmake_force
 CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/USART_Send/send_task.c.obj: CMakeFiles/STM32F411CEU6.elf.dir/flags.make
 CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/USART_Send/send_task.c.obj: E:/engineer_ws/NewUserControl/USER/Task/USART_Send/send_task.c
 CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/USART_Send/send_task.c.obj: CMakeFiles/STM32F411CEU6.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\engineer_ws\NewUserControl\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/USART_Send/send_task.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\engineer_ws\NewUserControl\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/USART_Send/send_task.c.obj"
 	E:\environment\environment\ARM_GCC\ARM_GCC\arm\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/USART_Send/send_task.c.obj -MF CMakeFiles\STM32F411CEU6.elf.dir\USER\Task\USART_Send\send_task.c.obj.d -o CMakeFiles\STM32F411CEU6.elf.dir\USER\Task\USART_Send\send_task.c.obj -c E:\engineer_ws\NewUserControl\USER\Task\USART_Send\send_task.c
 
 CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/USART_Send/send_task.c.i: cmake_force
@@ -1010,8 +982,6 @@ STM32F411CEU6_elf_OBJECTS = \
 "CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic2.c.obj" \
 "CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic3.c.obj" \
 "CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic4.c.obj" \
-"CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic5.c.obj" \
-"CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic6.c.obj" \
 "CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/TIM_Delay/tim_delay.c.obj" \
 "CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/Algorithm/algorithm_task.c.obj" \
 "CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/Robot_Config/robot.c.obj" \
@@ -1077,8 +1047,6 @@ STM32F411CEU6.elf: CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/
 STM32F411CEU6.elf: CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic2.c.obj
 STM32F411CEU6.elf: CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic3.c.obj
 STM32F411CEU6.elf: CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic4.c.obj
-STM32F411CEU6.elf: CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic5.c.obj
-STM32F411CEU6.elf: CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/IIC/Virtual_IIC/iic6.c.obj
 STM32F411CEU6.elf: CMakeFiles/STM32F411CEU6.elf.dir/USER/Module/TIM_Delay/tim_delay.c.obj
 STM32F411CEU6.elf: CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/Algorithm/algorithm_task.c.obj
 STM32F411CEU6.elf: CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/Robot_Config/robot.c.obj
@@ -1088,7 +1056,7 @@ STM32F411CEU6.elf: CMakeFiles/STM32F411CEU6.elf.dir/build.make
 STM32F411CEU6.elf: E:/engineer_ws/NewUserControl/Middlewares/ST/ARM/DSP/Lib/libarm_cortexM4lf_math.a
 STM32F411CEU6.elf: CMakeFiles/STM32F411CEU6.elf.dir/objects1.rsp
 STM32F411CEU6.elf: CMakeFiles/STM32F411CEU6.elf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=E:\engineer_ws\NewUserControl\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Linking C executable STM32F411CEU6.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=E:\engineer_ws\NewUserControl\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Linking C executable STM32F411CEU6.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\STM32F411CEU6.elf.dir\link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Building E:/engineer_ws/NewUserControl/cmake-build-debug/STM32F411CEU6.hex"
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Building E:/engineer_ws/NewUserControl/cmake-build-debug/STM32F411CEU6.bin"

@@ -110,7 +110,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   robot_init();
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_SET);//
+
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in cmsis_os2.c) */

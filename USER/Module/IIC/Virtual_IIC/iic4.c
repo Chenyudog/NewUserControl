@@ -245,7 +245,7 @@ float get_real_angle_4(MT6701_Encoder_t *encoder)
 {
     // 核心公式：(当前14位原始角度 - 14位零点原始角度) × 360° / 14位量程(16384)
     // 强制转为int16_t防止无符号数相减溢出（如raw_angle < raw_zero时）
-    int16_t angle_diff = (int16_t)(encoder->raw_angle - encoder->raw_zero);
+    int16_t angle_diff = (encoder->raw_angle - encoder->raw_zero);
     encoder->real_angle = (float)angle_diff * 360.0f / 16384.0f;
 
     // 可选：将单圈角度限制在【0~360°】或【-180~180°】，根据需求选择
@@ -306,7 +306,7 @@ void MT6701_Update_4(MT6701_Encoder_t *encoder) {
                        encoder->turns, encoder->total_angle_deg);
 
     // 步骤3：计算角度差，【核心修正】用14位标准跨圈阈值8192/-8192
-    encoder->diff = (int16_t)(encoder->raw_angle - encoder->last_raw_angle);
+    encoder->diff = (encoder->raw_angle - encoder->last_raw_angle);
     if (encoder->diff > 8192) {        // 超过量程一半，判定为正向跨圈
         encoder->diff -= 16384;
     } else if (encoder->diff < -8192) { // 低于负的量程一半，判定为反向跨圈
@@ -315,7 +315,7 @@ void MT6701_Update_4(MT6701_Encoder_t *encoder) {
 
     // 步骤4：diff连续累加，实现多圈累计
     encoder->total_angle += encoder->diff;
-    encoder->turns = (int32_t)(encoder->total_angle / 16384);
+    encoder->turns =(encoder->total_angle / 16384);
 
     // 核心补全：根据累计原始值计算浮点总角度（度），同步更新
     encoder->total_angle_deg = (float)encoder->total_angle * 360.0f / 16384.0f;

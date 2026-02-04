@@ -30,7 +30,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 99,
+				"line" : 94,
 				"parent" : 0
 			},
 			{
@@ -42,25 +42,25 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 95,
+				"line" : 90,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 96,
+				"line" : 91,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 97,
+				"line" : 92,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 101,
+				"line" : 96,
 				"parent" : 0
 			},
 			{
@@ -350,9 +350,7 @@
 				180,
 				182,
 				184,
-				186,
-				188,
-				190
+				186
 			]
 		},
 		{
@@ -585,26 +583,6 @@
 				"role" : "flags"
 			},
 			{
-				"backtrace" : 5,
-				"fragment" : "USER/Module/IIC/Virtual_IIC/iic5.c",
-				"role" : "flags"
-			},
-			{
-				"backtrace" : 5,
-				"fragment" : "USER/Module/IIC/Virtual_IIC/iic6.c",
-				"role" : "flags"
-			},
-			{
-				"backtrace" : 5,
-				"fragment" : "USER/Module/IIC/Virtual_IIC/iic5.h",
-				"role" : "flags"
-			},
-			{
-				"backtrace" : 5,
-				"fragment" : "USER/Module/IIC/Virtual_IIC/iic6.h",
-				"role" : "flags"
-			},
-			{
 				"backtrace" : 6,
 				"fragment" : "E:\\engineer_ws\\NewUserControl\\Middlewares\\ST\\ARM\\DSP\\Lib\\libarm_cortexM4lf_math.a",
 				"role" : "libraries"
@@ -739,9 +717,7 @@
 				181,
 				183,
 				185,
-				187,
-				189,
-				191
+				187
 			]
 		},
 		{
@@ -807,9 +783,7 @@
 				180,
 				182,
 				184,
-				186,
-				188,
-				190
+				186
 			]
 		},
 		{
@@ -829,7 +803,7 @@
 				167,
 				168,
 				169,
-				192
+				188
 			]
 		}
 	],
@@ -1779,28 +1753,6 @@
 		{
 			"backtrace" : 1,
 			"path" : "USER/Module/IIC/Virtual_IIC/iic4.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "USER/Module/IIC/Virtual_IIC/iic5.c",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "USER/Module/IIC/Virtual_IIC/iic5.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "USER/Module/IIC/Virtual_IIC/iic6.c",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "USER/Module/IIC/Virtual_IIC/iic6.h",
 			"sourceGroupIndex" : 0
 		},
 		{

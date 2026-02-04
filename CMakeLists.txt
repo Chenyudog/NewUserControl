@@ -85,11 +85,7 @@ file(GLOB_RECURSE SOURCES "Core/*.*" "Middlewares/*.*" "Drivers/*.*"
         "USER/Task/USART_Send/*.*"
 )
 
-set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F411CEUX_FLASH.ld
-        USER/Module/IIC/Virtual_IIC/iic5.c
-        USER/Module/IIC/Virtual_IIC/iic6.c
-        USER/Module/IIC/Virtual_IIC/iic5.h
-)
+set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F411CEUX_FLASH.ld)
 
 add_link_options(-Wl,-gc-sections,--print-memory-usage,-Map=${PROJECT_BINARY_DIR}/${PROJECT_NAME}.map)
 add_link_options(-mcpu=cortex-m4 -mthumb -mthumb-interwork)

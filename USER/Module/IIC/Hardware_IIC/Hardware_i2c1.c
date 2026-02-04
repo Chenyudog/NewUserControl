@@ -112,7 +112,7 @@ uint16_t get_raw_angle_6(void)
 
     // 使用硬件IIC1读取AMS5600的原始角度寄存器（MT6701_REG_ANGLE_H为高8位地址）
     // 连续读取2个字节到Raw数组（Raw[0]为高8位，Raw[1]为低8位）
-    status = HAL_I2C_Mem_Read(&hi2c2,
+    status = HAL_I2C_Mem_Read(&hi2c3,
                               MT6701_SLAVE_ADDR << 1,  // 设备地址左移1位（HAL库要求）
                               MT6701_REG_ANGLE_H,           // 寄存器地址
                               I2C_MEMADD_SIZE_8BIT,  // 8位寄存器地址
@@ -156,7 +156,7 @@ void MT6701_Init_6(MT6701_Encoder_t *encoder) {
 void MT6701_SetZero_6(MT6701_Encoder_t *encoder) {
     uint8_t zero_posi[2] = {0, 0};
     HAL_StatusTypeDef status;          // 存储IIC操作状态
-    status = HAL_I2C_Mem_Read(&hi2c2,
+    status = HAL_I2C_Mem_Read(&hi2c3,
                               MT6701_SLAVE_ADDR << 1,  // 设备地址左移1位（HAL库要求）
                               MT6701_ZERO_H,       // 寄存器地址
                               I2C_MEMADD_SIZE_8BIT,  // 8位寄存器地址
@@ -193,11 +193,10 @@ void MT6701_Update_6(MT6701_Encoder_t *encoder) {
     // 更新总角度
     encoder->total_angle += diff;
     // 计算当前圈数（总角度除以360，取整数部分）
-    encoder->turns = (int32_t)(encoder->total_angle / 16384);
+    encoder->turns = (encoder->total_angle / 16384);
 
     // 计算角度差对应的度数（12位分辨率：360°/16384）
     encoder->total_angle_deg = (float)(encoder->total_angle) * (360.0f / 16384.0f);
-    encoder->total_angle_deg = MT6701FILTER * encoder->total_angle_deg + (1 - MT6701FILTER) * encoder->last_total_angle_deg;
 
     // 缓存当前原始角度，供下次比较
     encoder->last_raw_angle = encoder->raw_angle;

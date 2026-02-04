@@ -28,7 +28,7 @@
 #include "iic2.h"
 #include "iic3.h"
 #include "iic4.h"
-
+#include <stdlib.h>
 /* -------------------------------- 线程间通讯Topics相关 ------------------------------- */
 //static struct chassis_cmd_msg chassis_cmd;
 //static struct chassis_fdb_msg chassis_fdb;
@@ -56,9 +56,8 @@ static MT6701_Encoder_t mt6701_encoder_3 = {0};
 static MT6701_Encoder_t mt6701_encoder_4 = {0};
 static MT6701_Encoder_t mt6701_encoder_5 = {0};
 static MT6701_Encoder_t mt6701_encoder_6 = {0};
-static MT6701_Encoder_t mt6701_encoder_7 = {0};
 
-float angles_encoder[7] = {0};
+float angles_encoder[6] = {0};
 
 extern QueueHandle_t xQueue;      // 队列句柄
 
@@ -74,12 +73,11 @@ void AlgorithmTask_Entry(void const * argument)
         get_raw_angle_4();
         get_raw_angle_5();
         get_raw_angle_6();
-        get_raw_angle_7();
         HAL_Delay(10); // 延时1s等待MT6701初始化完成
     }
 
     // 初始化MT6701编码器并标定0点
-    MT6701_Init_6(&mt6701_encoder_1);
+    MT6701_Init_1(&mt6701_encoder_1);
     HAL_Delay(10); // 延时1s等待MT6701初始化完成
     MT6701_SetZero_1(&mt6701_encoder_1
 
@@ -91,7 +89,7 @@ void AlgorithmTask_Entry(void const * argument)
     MT6701_SetZero_2(&mt6701_encoder_2);
     HAL_Delay(10); // 延时1s等待MT6701初始化完成
 
-    MT6701_Init_4(&mt6701_encoder_3);
+    MT6701_Init_3(&mt6701_encoder_3);
     HAL_Delay(10); // 延时1s等待MT6701初始化完成
     MT6701_SetZero_3(&mt6701_encoder_3);
     HAL_Delay(10); // 延时1s等待MT6701初始化完成
@@ -144,14 +142,23 @@ void AlgorithmTask_Entry(void const * argument)
         MT6701_Update_6(&mt6701_encoder_6);
 
 
-        angles_encoder[0] = mt6701_encoder_1.total_angle_deg;
+        angles_encoder[0] = -mt6701_encoder_1.total_angle_deg;//与下位机方向电机转动方向相反
         angles_encoder[1] = mt6701_encoder_2.total_angle_deg;
         angles_encoder[2] = mt6701_encoder_3.total_angle_deg;
         angles_encoder[3] = mt6701_encoder_4.total_angle_deg;
-        angles_encoder[4] = mt6701_encoder_5.total_angle_deg;
-        angles_encoder[5] = mt6701_encoder_6.total_angle_deg;
+        angles_encoder[4] = -mt6701_encoder_5.total_angle_deg;
+        angles_encoder[5] = -mt6701_encoder_6.total_angle_deg;
 
-
+        //判断当前状态是否稳定
+        if (abs(mt6701_encoder_1.diff)<50 &&
+            abs(mt6701_encoder_2.diff)<50 &&
+            abs(mt6701_encoder_3.diff)<50 &&
+            abs(mt6701_encoder_4.diff)<50 &&
+            abs(mt6701_encoder_5.diff)<50 &&
+            abs(mt6701_encoder_6.diff)<50)
+        {
+            HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, GPIO_PIN_SET);
+        }
         // 将编码器数据放入队列
         xQueueSend(xQueue, angles_encoder, 0);
 

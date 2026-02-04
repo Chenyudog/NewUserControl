@@ -18,7 +18,7 @@
 
 static void Software_IIC_Init_1(void);
 uint16_t get_raw_angle_1(void);
-void MT6701_Init_6(MT6701_Encoder_t *encoder) ;
+void MT6701_Init_1(MT6701_Encoder_t *encoder) ;
 void MT6701_SetZero_1(MT6701_Encoder_t *encoder);
 float get_real_angle_1(MT6701_Encoder_t *encoder);
 void MT6701_Update_1(MT6701_Encoder_t *encoder);
