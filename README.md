@@ -1,2 +1,1 @@
-# STM32F411CEU6_UserControl
-STM32F411CEU6_UserControl
+use MT6701 rather than AS5600 to detect the angle
