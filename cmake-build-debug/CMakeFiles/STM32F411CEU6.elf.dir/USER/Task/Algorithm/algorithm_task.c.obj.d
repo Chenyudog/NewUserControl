@@ -106,4 +106,7 @@ CMakeFiles/STM32F411CEU6.elf.dir/USER/Task/Algorithm/algorithm_task.c.obj: \
  E:\engineer_ws\NewUserControl\Core\Inc/main.h \
  E:\engineer_ws\NewUserControl\USER\Module\IIC\Virtual_IIC/iic2.h \
  E:\engineer_ws\NewUserControl\USER\Module\IIC\Virtual_IIC/iic3.h \
- E:\engineer_ws\NewUserControl\USER\Module\IIC\Virtual_IIC/iic4.h
+ E:\engineer_ws\NewUserControl\USER\Module\IIC\Virtual_IIC/iic4.h \
+ e:\environment\environment\arm_gcc\arm_gcc\arm\arm-none-eabi\include\stdlib.h \
+ e:\environment\environment\arm_gcc\arm_gcc\arm\arm-none-eabi\include\machine\stdlib.h \
+ e:\environment\environment\arm_gcc\arm_gcc\arm\arm-none-eabi\include\alloca.h

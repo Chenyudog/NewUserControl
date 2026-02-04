@@ -149,7 +149,7 @@ void AlgorithmTask_Entry(void const * argument)
         angles_encoder[4] = -mt6701_encoder_5.total_angle_deg;
         angles_encoder[5] = -mt6701_encoder_6.total_angle_deg;
 
-        //判断当前状态是否稳定
+        //判断当前状态是否稳定   50大约是1°
         if (abs(mt6701_encoder_1.diff)<50 &&
             abs(mt6701_encoder_2.diff)<50 &&
             abs(mt6701_encoder_3.diff)<50 &&
